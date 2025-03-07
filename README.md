@@ -27,11 +27,11 @@ Ensure you have the following installed on your system:
 
 ## 🚀 Usage
 Run the chatbot using the following command:
-For Gemini
+- For Gemini
 ```bash
-python Gemnini.py
+python Gemini.py
 ```
-For OpenAI
+- For OpenAI
 ```bash
 python Openai.py
 ```
