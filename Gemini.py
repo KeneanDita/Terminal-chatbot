@@ -4,7 +4,7 @@ from colorama import Fore, Style, init
 
 init(autoreset=True)
 
-#insert your Gemni API key here
+#Insert Your api key here
 api_key = ""
 
 if not api_key:
@@ -24,13 +24,11 @@ def chat_with_gemini():
             user_input = input(f"\n{Fore.GREEN}You:{Style.RESET_ALL} ")
 
             if user_input.lower() == "exit":
-                print(f"{Fore.RED}Goodbye!{Style.RESET_ALL}")
-                break
+                print(f"{Fore.RED}Goodbye, Kenean!{Style.RESET_ALL}")
+                break  # Indentation fixed here
 
             payload = {
-                "contents": [{
-                    "parts": [{"text": user_input}]
-                }]
+                "contents": [{"parts": [{"text": user_input}]}]
             }
 
             headers = {"Content-Type": "application/json"}
@@ -41,9 +39,14 @@ def chat_with_gemini():
                 continue
 
             ai_response = response.json()
-            reply = ai_response.get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text", "")
 
-            print(format_response(reply if reply else "No response from AI."))
+            # Ensure the response structure is valid before accessing fields
+            try:
+                reply = ai_response["candidates"][0]["content"]["parts"][0]["text"]
+            except (KeyError, IndexError, TypeError):
+                reply = "No response from AI."
+
+            print(format_response(reply))
 
         except KeyboardInterrupt:
             print(f"\n{Fore.RED}Goodbye!{Style.RESET_ALL}")
