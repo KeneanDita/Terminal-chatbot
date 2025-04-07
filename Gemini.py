@@ -40,7 +40,6 @@ def chat_with_gemini():
 
             ai_response = response.json()
 
-            # Ensure the response structure is valid before accessing fields
             try:
                 reply = ai_response["candidates"][0]["content"]["parts"][0]["text"]
             except (KeyError, IndexError, TypeError):
