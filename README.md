@@ -1,16 +1,10 @@
-# 🤖 Terminal Chatbot
+# Terminal Chatbot
+
+## The base from which [FANCY AGENT](<https://github.com/KeneanDita/fancy-Agent>) was driven from.
 
 A simple terminal-based chatbot that interacts with users through text-based input and responses. This chatbot is designed to handle basic conversations and can be expanded with additional features.
 
-## ✨ Features
-- 🗨️ Interactive text-based conversation
-- 💻 Simple command-line interface
-- 🔧 Easily extendable with more responses and functionalities
-
-## 📌 Prerequisites
-Ensure you have the following installed on your system:
-- 🐍 Python 3
-## 📥 Installation
+## Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/KeneanDita/Terminal-chatbot.git
@@ -35,6 +29,6 @@ python Gemini.py
 python Openai.py
 ```
 
-## 👨‍💻 Author
+## Author
 Developed by [Kenean Dita](https://github.com/KeneanDita).
 
